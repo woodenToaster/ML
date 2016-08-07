@@ -30,16 +30,7 @@ X = [ones(m, 1) X];
 %       for each row.
 %       
 
-% sigmoid(dot(all_theta(1,:), X(1,:)))
-% sigmoid(dot(all_theta(2,:), X(1,:)))
-% sigmoid(dot(all_theta(3,:), X(1,:)))
-% sigmoid(dot(all_theta(4,:), X(1,:)))
-
-for row = 1:m
-    [x, p(row)] = max(sigmoid(all_theta * X(row,:)'));
-end
+[x, p] = max(sigmoid(all_theta * X'));
 
 % =========================================================================
-
-
 end
